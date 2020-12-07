@@ -208,7 +208,7 @@
         <div class="modal-content">
             <span class="close" onclick="hideModal()">&times;</span>
             <img id="modalImage" class="img-container" src="" alt="">
-            <div>
+            <div style="flex: 1">
                 <div class="detail-container">
                     <h1 id="modalTitle"></h1>
                     <p id="modalDesc"></p>
@@ -235,9 +235,9 @@
     <section id="photos">
 
         <?php foreach ($galeryData as $data) { ?>
-            <div class="gallery" onclick="showModal('<?php echo $data->galeryID ?>', '<?php echo ($data->galeryImage); ?>', '<?php echo $data->galeryTitle ?>', '<?php echo $data->galeryDesc ?>')">
+            <div class="gallery" onclick="showModal('<?php echo $data->galeryID ?>', '<?php echo base_url($data->galeryImage); ?>', '<?php echo $data->galeryTitle ?>', '<?php echo $data->galeryDesc ?>')">
                 <a href="">
-                    <img src="<?php echo ($data->galeryImage); ?>" alt="<?php echo $data->galeryTitle ?>">
+                    <img src="<?php echo base_url($data->galeryImage); ?>" alt="<?php echo $data->galeryTitle ?>">
                 </a>
                 <div class="desc">
                     <h1><?php echo $data->galeryTitle ?></h1>

@@ -7,6 +7,7 @@ class Welcome extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('M_galery');
+		$this->load->model('M_loker');
 		$this->load->helper('url');
 	}
 	public function index()
@@ -18,5 +19,16 @@ class Welcome extends CI_Controller
 	{
 		$data['galeryData'] = $this->M_galery->getAllGalery();
 		$this->load->view('galery', $data);
+	}
+
+	public function loker()
+	{
+		$data['lokerData'] = $this->M_loker->getAllLoker();
+		$this->load->view('loker', $data);
+	}
+
+	public function about()
+	{
+		$this->load->view('about');
 	}
 }

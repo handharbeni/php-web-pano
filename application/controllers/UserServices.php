@@ -7,6 +7,7 @@ class UserServices extends CI_Controller
     {
         parent::__construct();
         $this->load->model('M_galery');
+        $this->load->model('M_loker');
         $this->load->helper('url');
         $this->load->helper('form');
         header('Access-Control-Allow-Origin: *');
@@ -14,7 +15,7 @@ class UserServices extends CI_Controller
 
     public function index()
     {
-        $this->load->view('upload_galery');
+        // $this->load->view('upload_galery');
     }
 
     public function getAllCommentOnGalery($ID)
@@ -34,6 +35,35 @@ class UserServices extends CI_Controller
 
         if ($ID && $Name && $Value) {
             $this->M_galery->insertCommentGalery($ID, $Name, $Value);
+            $responses['status'] = 1;
+            $responses['data'] = [];
+            $responses['messages'] = "comment.addSuccess";
+            echo json_encode($responses);
+        } else {
+            $responses['status'] = 1;
+            $responses['data'] = [];
+            $responses['messages'] = "comment.wrongData";
+            echo json_encode($responses);
+        }
+    }
+
+    public function getAllCommentOnLoker($ID)
+    {
+        $data = $this->M_loker->getAllCommentLoker($ID);
+        $responses['status'] = 1;
+        $responses['data'] = $data;
+        $responses['messages'] = "comment.dataFound";
+        echo json_encode($responses);
+    }
+
+    public function insertCommentOnLoker()
+    {
+        $ID = $this->input->post('ID');
+        $Name = $this->input->post('Name');
+        $Value = $this->input->post('Value');
+
+        if ($ID && $Name && $Value) {
+            $this->M_loker->insertCommentLoker($ID, $Name, $Value);
             $responses['status'] = 1;
             $responses['data'] = [];
             $responses['messages'] = "comment.addSuccess";
