@@ -235,9 +235,9 @@
     <section id="photos">
 
         <?php foreach ($galeryData as $data) { ?>
-            <div class="gallery" onclick="showModal('<?=$data->galeryID?>', '<?=$hostImage."".$data->galeryImage?>', '<?=$data->galeryTitle?>', '<?=$data->galeryDesc?>')">
+            <div class="gallery" onclick="showModal(`<?=$data->galeryID?>`, `<?=$hostImage.$data->galeryImage?>`, `<?=$data->galeryTitle?>`, `<?=$data->galeryDesc?>`)">
                 <a href="">
-                    <img src="<?=$hostImage."".$data->galeryImage?>" alt="<?=$data->galeryTitle?>">
+                    <img src="<?=$hostImage.$data->galeryImage?>" alt="<?=$data->galeryTitle?>">
                 </a>
                 <div class="desc">
                     <h1><?=$data->galeryTitle?></h1>
