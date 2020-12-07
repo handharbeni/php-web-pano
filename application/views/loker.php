@@ -32,7 +32,7 @@
         }
 
         #photos .gallery h1 {
-            color: #182847;
+            color: #ffffff;
             font-size: 20px;
             margin: 0;
             margin: 12px 20px;
