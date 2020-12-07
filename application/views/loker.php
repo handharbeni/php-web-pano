@@ -172,7 +172,7 @@
 
     <section id="photos">
         <?php foreach ($lokerData as $data) { ?>
-            <div class="gallery" onclick="showModal('<?php echo $data->lokerID;?>', '<?php echo $hostImage.$data->lokerImage; ?>', '<?php echo $data->lokerTitle; ?>', '<?php echo $data->lokerDesc; ?>')">
+            <div class="gallery" onclick="showModal(`<?php echo $data->lokerID;?>`, `<?php echo $hostImage.$data->lokerImage; ?>`, `<?php echo $data->lokerTitle; ?>`, `<?php echo $data->lokerDesc; ?>`)">
                 <div>
                     <img src="<?php echo $hostImage."".$data->lokerImage; ?>" alt="<?php echo $data->lokerTitle; ?>">
                     <div>
