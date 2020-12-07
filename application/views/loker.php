@@ -109,7 +109,7 @@
             background-color: #f9f9f9;
             border: 1px solid #D0D0D0;
             border-radius: 4px;
-            color: #002166;
+            color: #ffffff;
             display: block;
             margin: 12px 0 12px 0;
             padding: 12px 10px 12px 10px;
