@@ -237,7 +237,7 @@
         <?php foreach ($galeryData as $data) { ?>
             <div class="gallery" onclick="showModal('<?php echo $data->galeryID ?>', '<?php echo base_url($data->galeryImage); ?>', '<?php echo $data->galeryTitle ?>', '<?php echo $data->galeryDesc ?>')">
                 <a href="">
-                    <img src="<?php echo base_url($data->galeryImage); ?>" alt="<?php echo $data->galeryTitle ?>">
+                    <img src="<?=$hostImage."".$data->galeryImage?>" alt="<?php echo $data->galeryTitle ?>">
                 </a>
                 <div class="desc">
                     <h1><?php echo $data->galeryTitle ?></h1>

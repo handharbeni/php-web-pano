@@ -17,12 +17,14 @@ class Welcome extends CI_Controller
 
 	public function galery()
 	{
+		$data['hostImage'] = 'https://l3m0xvv9.tinifycdn.com/';
 		$data['galeryData'] = $this->M_galery->getAllGalery();
 		$this->load->view('galery', $data);
 	}
 
 	public function loker()
 	{
+		$data['hostImage'] = 'https://l3m0xvv9.tinifycdn.com/';
 		$data['lokerData'] = $this->M_loker->getAllLoker();
 		$this->load->view('loker', $data);
 	}
